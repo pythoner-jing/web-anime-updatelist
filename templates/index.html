@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/dist/css/bootstrap.min.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/dist/js/bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/socket.io.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+  <style>
+    a[path] {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <a name="top"></a>
+  <div class="container" style="margin:20px auto;">
+    <div class="row">
+      <div class="col-sm-12">
+        <button id="update" class="btn btn-info" style="width:100%;">查看更新</button>
+        <div id="result" style="margin-top:10px;"></div>
+        <a class="btn btn-default" style="width:100%;" href="#top">返回顶部</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

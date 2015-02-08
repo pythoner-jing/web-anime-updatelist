@@ -1,0 +1,20 @@
+{% for key in data.iterkeys() %}
+{% if loop.first %}
+<div class="panel panel-warning">
+{% else %}
+<div class="panel panel-default">
+{% endif %}
+  <div class="panel-heading">{{ key }}</div>
+  <ul class="list-group">
+    {% for item in data[key] %}
+    <li class="list-group-item clearfix">
+      <a name="anime-{{ key }}-{{ loop.index }}"/>
+      <a id="anime-{{ key }}-{{ loop.index }}" path="{{ item.attrib.href }}" onclick="link_click(this)">{{ item.text }}</a>
+      <div class="content hidden" style="margin-top:10px;margin-bottom:10px;">
+      </div>
+      <a href="#anime-{{ key }}-{{ loop.index }}" class="btn btn-danger hidden folding" style="width:100%;" onclick="folding(this)">收起</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endfor %}
